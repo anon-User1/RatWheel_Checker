@@ -1,0 +1,26 @@
+LHB_dataset,,,,,
+Issue-id,Title,Task,Workload,Solution,Detect rule
+HBASE-10549,"When there is a hole, LoadIncrementalHFiles will hang in an infinite loop.",LoadIncrementalHFiles,first region info lost,add check code,/
+HBASE-13317,Region server reportForDuty stuck looping if there is a master change,reportForDuty,master change,clean old state,R3
+HBASE-14621,ReplicationLogCleaner gets stuck when a regionserver crashes,loading the replication queue,regionserver crashes,clean old state,R1
+HBASE-20104,Fix infinite loop of RIT when creating table on a rsgroup that has no online servers,creating table,rsgroup which has been stopped or decommissioned,add check code,R2
+HBASE-20616,TruncateTableProcedure is stuck in retry loop in TRUNCATE_TABLE_CREATE_FS_LAYOUT state,write files(check file status),failed to write some files,clean old state,R2
+HBASE-20865,CreateTableProcedure is stuck in retry loop in CREATE_TABLE_WRITE_FS_LAYOUT state,write files(check file status),failed to write some files,clean old state,R2
+HBASE-21330,ReopenTableRegionsProcedure will enter an infinite loop if we schedule a TRSP at the same time,reopen regions,schedule a TRSP at the same time,add check code,R3
+HBASE-24546,CloneSnapshotProcedure unlimited retry,CloneSnapshot,cloned regions name are unchanged,clean old state,R3
+HBASE-23594,Procedure stuck due to region happen to recorded on two servers.,assign region,region happen to recorded on two servers,add check code,R2
+HDFS-11303,Hedged read might hang infinitely if read data from all DN failed,read from a DN,read all DN failed,clean old state,/
+HDFS-14847,Erasure Coding: Blocks are over-replicated while EC decommissioning,create replication,dn0 replicates in success and dn1 replicates in failure,complex logic,R2
+HDFS-14920,Erasure Coding: Decommission may hang If one or more datanodes are out of service during decommission,reconstruction the block,datanodes are out of service,complex logic,R2
+HDFS-15211,EC: File write hangs during close in case of Exception during updatePipelin,flush healthy streamers,a exception due to closure of slow stream,clean old state,R3
+HDFS-15398,EC: hdfs client hangs due to exception during addBlock,check block status,exception during addBlock,clean old state,R1
+YARN-2853,Killing app may hang while AM is unregistering,add transition,receives the attempt_unregister event before attempt_kill event,add check code,R1
+YARN-2853-2,Killing app may hang while AM is unregistering,add transition,receives the attempt_unregister event before attempt_kill event,add check code,R1
+YARN-8833,Avoid potential integer overflow when computing fair shares,calculation,integer overflow,add check code,R3
+ZOOKEEPER-693,Observer stuck in tight notification loop in FLE,notification loop,leader election instances were not being shut down correctly,clean old state,R2
+ZOOKEEPER-2201,Network issues can cause cluster to hang due to near-deadlock,write same content,Network issues,complex logic,/
+ZOOKEEPER-3531,Synchronization on ACLCache cause cluster to hang when network/disk issues happen during datatree serialization,serializing ACLCache,network/disk issues,complex logic,R3
+HIVE-15700,BytesColumnVector can get stuck trying to resize byte buffer,reallocate/copy all of these values into the same memory buffer.,resize byte buffer,complex logic,R2
+HIVE-16007,When the query does not complie the LogRunnable never stops,updateQueryLog,resize byte buffer,clean old state,R2
+HIVE-19391,RowContainer.setupWriter hangs when the file creation failed,File.createTempFile,file creation failed,clean old state,R3
+HIVE-25563,Iceberg table operations hang a long time if metadata is missing/corrupted,operations on such a table,metadata is missing/corrupted,configuration,R2

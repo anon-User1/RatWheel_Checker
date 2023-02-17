@@ -1,0 +1,86 @@
+Issue-ID,Title,Type,sub-type,Message
+HDFS-7005,DFS input streams do not timeout,hang,resource unavalable,level 3
+HDFS-3166,Hftp connections do not have a timeout,hang,resource unavalable,level 3
+HDFS-3180,Add socket timeouts to webhdfs,hang,resource starvation,level 3
+HDFS-6378,NFS registration should timeout instead of hanging when portmap/rpcbind is not available,hang,resource unavalable,level 3
+HDFS-11303,Hedged read might hang infinitely if read data from all DN failed,hang,loop,level 2
+HDFS-14847,Erasure Coding: Blocks are over-replicated while EC decommissioning,hang,loop,level 2
+HDFS-14920,Erasure Coding: Decommission may hang If one or more datanodes are out of service during decommission,hang,loop,level 2
+HDFS-15211,EC: File write hangs during close in case of Exception during updatePipelin,hang,loop,level 3
+HDFS-15398,EC: hdfs client hangs due to exception during addBlock,hang,loop,level 3
+YARN-2853,Killing app may hang while AM is unregistering,hang,loop,level 3
+YARN-2853-2,Killing app may hang while AM is unregistering,hang,loop,level 3
+YARN-3999,RM hangs on draining events,hang,resource starvation,level 1
+YARN-8833,Avoid potential integer overflow when computing fair shares,hang,loop,level 3
+YARN-8513,CapacityScheduler infinite loop when queue is near fully utilized,hang,loop,level 2
+YARN-7474,Yarn resourcemanager stop allocating container when cluster resource is sufficient,hang,resource starvation,level 2
+YARN-9163,Deadlock when use yarn rmadmin -refreshQueues,hang,resource starvation,level 2
+YARN-4477,FairScheduler: Handle condition which can result in an infinite loop in attemptScheduling.,hang,loop,level 3
+YARN-3878,AggregatedLogsBlock page can infinitely loop if the aggregated log file is corrupted,hang,loop,level 3
+YARN-2905,AggregatedLogsBlock page can infinitely loop if the aggregated log file is corrupted,hang,loop,level 3
+YARN-9527,Rogue LocalizerRunner/ContainerLocalizer repeatedly downloading same file,hang,loop,level 2
+YARN-1395,Distributed shell application master launched with debug flag can hang waiting for external ls process.,hang,infinite wait,level 3
+YARN-1686,NodeManager.resyncWithRM() does not handle exception which cause NodeManger to Hang.,hang,infinite wait,level 3
+HBASE-21292,IdLock.getLockEntry() may hang if interrupted,hang,resource starvation,level 2
+HBASE-18137,Replication gets stuck for empty WALs,hang,infinite wait,level 3
+HBASE-25905,Shutdown of WAL stuck at waitForSafePoint,hang,infinite wait,level 2
+HBASE-20492,UnassignProcedure is stuck in retry loop on region stuck in OPENING state,hang,loop,level 3
+HBASE-19321,ZKAsyncRegistry ctor would hang when zookeeper cluster is not available,hang,resource unavalable,level 2
+HBASE-18111,Replication stuck when cluster connection is closed,hang,loop,level 2
+HBASE-20657,Retrying RPC call for ModifyTableProcedure may get stuck,hang,loop,level 3
+HBASE-26679,Wait on the future returned by FanOutOneBlockAsyncDFSOutput.flush would stuck,hang,infinite wait,level 3
+HBASE-21052,"After restoring a snapshot, table.jsp page for the table gets stuck",hang,infinite wait,level 3
+HBASE-20890,PE filterScan seems to be stuck forever,hang,infinite wait,level 2
+HBASE-26311,Balancer gets stuck in cohosted replica distribution,hang,infinite wait,level 3
+HBASE-23581,Creating table gets stuck when specifying an invalid split policy as METADATA,hang,infinite wait,level 3
+HBASE-10549,"When there is a hole, LoadIncrementalHFiles will hang in an infinite loop.",hang,loop,level 3
+HBASE-13317,Region server reportForDuty stuck looping if there is a master change,hang,loop,level 2
+HBASE-14621,ReplicationLogCleaner gets stuck when a regionserver crashes,hang,loop,level 3
+HBASE-20104,Fix infinite loop of RIT when creating table on a rsgroup that has no online servers,hang,loop,level 3
+HBASE-20616,TruncateTableProcedure is stuck in retry loop in TRUNCATE_TABLE_CREATE_FS_LAYOUT state,hang,loop,level 1
+HBASE-20865,CreateTableProcedure is stuck in retry loop in CREATE_TABLE_WRITE_FS_LAYOUT state,hang,loop,level 3
+HBASE-21330,ReopenTableRegionsProcedure will enter an infinite loop if we schedule a TRSP at the same time,hang,loop,level 3
+HBASE-23594,Procedure stuck due to region happen to recorded on two servers.,hang,loop,level 2
+ZOOKEEPER-2251,Add Client side packet response timeout to avoid infinite wait.,hang,infinite wait,level 3
+ZOOKEEPER-693,Observer stuck in tight notification loop in FLE,hang,loop,level 1
+ZOOKEEPER-2201,Network issues can cause cluster to hang due to near-deadlock,hang,loop,level 3
+ZOOKEEPER-3531,Synchronization on ACLCache cause cluster to hang when network/disk issues happen during datatree serialization,hang,loop,level 3
+MAPREDUCE-2185,Infinite loop at creating splits using CombineFileInputFormat,hang,loop,level 3
+MAPREDUCE-4870,MRJobsWithHistoryService causes infinite loop if it fails,hang,loop,level 3
+MAPREDUCE-3031,Job Client goes into infinite loop when we kill AM,hang,loop,level 3
+MAPREDUCE-6689,MapReduce job can infinitely increase number of reducer resource requests,hang,loop,level 3
+HADOOP-11934,Use of JavaKeyStoreProvider in LdapGroupsMapping causes infinite loop,hang,loop,level 3
+HADOOP-4692,Namenode in infinite loop for replicating/deleting corrupted block,hang,loop,level 2
+HADOOP-11932,MetricsSinkAdapter hangs when being stopped,hang,infinite wait,level 3
+HADOOP-9549,WebHdfsFileSystem hangs on close(),hang,infinite wait,level 3
+HIVE-15700,BytesColumnVector can get stuck trying to resize byte buffer,hang,loop,level 3
+HIVE-16007,When the query does not complie the LogRunnable never stops,hang,loop,level 3
+HIVE-19391,RowContainer.setupWriter hangs when the file creation failed,hang,loop,level 3
+HIVE-25563,Iceberg table operations hang a long time if metadata is missing/corrupted,hang,loop,level 3
+HIVE-4000,Hive client goes into infinite loop at 100,hang,loop,level 3
+HIVE-17523,Insert into druid table hangs Hive server2 in an infinite loop,hang,loop,level 3
+HDFS-8797,WebHdfsFileSystem creates too many connections for pread,wokload,/,level 3
+HDFS-10220,A large number of expired leases can make namenode unresponsive and cause failover,wokload,/,level 2
+HDFS-11225,NameNode crashed because deleteSnapshot held FSNamesystem lock too long,wokload,/,level 3
+HDFS-11015,Enforce timeout in balancer,wokload,/,level 3
+HDFS-15719,[Hadoop 3] Both NameNodes can crash simultaneously due to the short JN socket timeout,wokload,/,level 3
+HDFS-1490,TransferFSImage should timeout,wokload,/,level 3
+HDFS-6166,revisit balancer so_timeout,wokload,/,level 3
+HDFS-8311,DataStreamer.transfer() should timeout the socket InputStream.,wokload,/,level 3
+HDFS-4176,EditLogTailer should call rollEdits with a timeout,wokload,/,level 3
+HDFS-7608,hdfs dfsclient newConnectedPeer has no write timeout,wokload,/,level 3
+HDFS-4858,HDFS DataNode to NameNode RPC should timeout,wokload,/,level 2
+HDFS-9659,EditLogTailerThread to Active Namenode RPC should timeout,wokload,/,level 3
+HDFS-11307,The rpc to portmap service for NFS has hardcoded timeout,wokload,/,level 3
+HDFS-2637,The rpc timeout for block recovery is too low,wokload,/,level 3
+HDFS-8270,create() always retried with hardcoded timeout when file already exists with open lease,wokload,/,level 3
+HDFS-12323,NameNode terminates after full GC thinking QJM unresponsive if full GC is much longer than timeout,wokload,/,level 3
+HDFS-13735,Make QJM HTTP URL connection timeout configurable,wokload,/,level 3
+HDFS-12210,Block Storage: volume creation times out while creating 3TB volume because of too many containers,wokload,/,level 1
+YARN-492,Too many open files error to launch a container,wokload,/,level 3
+YARN-10720,YARN WebAppProxyServlet should support connection timeout to prevent proxy server from hanging,wokload,/,level 3
+HBASE-18675,"Making {max,min}SessionTimeout configurable for MiniZooKeeperCluster",wokload,/,level 3
+HBASE-23293,make ship edits timeout configurable,wokload,/,level 3
+HBASE-20401,Make `MAX_WAIT` and `waitIfNotFinished` in CleanerContext configurable,wokload,/,level 1
+HBASE-18646,"LogRollMasterProcedureManager: make procedure timeout, thread pool size configurable",wokload,/,level 3
+HBASE-18248,Warn if monitored RPC task has been tied up beyond a configurable threshold,wokload,/,level 3
